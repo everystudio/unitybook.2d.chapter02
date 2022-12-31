@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentAngle: 0
-  weatherText: {fileID: 0}
+  weatherText: {fileID: 1914554922}
 --- !u!50 &1189849442
 Rigidbody2D:
   serializedVersion: 4
