@@ -1,18 +1,18 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RouletteController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Rigidbody2D myRigidboyd;
+    [SerializeField] private float currentAngle;
+    private void Start()
     {
-        
+        myRigidboyd = GetComponent<Rigidbody2D>();
+        myRigidboyd.AddTorque(5f, ForceMode2D.Impulse);
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        currentAngle = Vector3.SignedAngle(transform.up, Vector3.up, new Vector3(0f, 0f, -1f));
     }
 }
