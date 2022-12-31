@@ -21,10 +21,16 @@ public class RouletteController : MonoBehaviour
         {
             myRigidboyd.AddTorque(5f, ForceMode2D.Impulse);
             myRigidboyd.angularDrag = 0f;
+            weatherText.color = Color.white;
         }
         if (Input.GetMouseButtonDown(1))
         {
             myRigidboyd.angularDrag = 0.75f;
+        }
+
+        if (myRigidboyd.IsSleeping())
+        {
+            weatherText.color = Color.red;
         }
 
         currentAngle = Vector3.SignedAngle(transform.up, Vector3.up, new Vector3(0f, 0f, -1f));
